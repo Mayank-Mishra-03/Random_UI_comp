@@ -3,7 +3,7 @@ import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const allPages = ["/", "/c1", "/c2", "/c3", "/c4", "/c5", "/c6"];
+const allPages = ["/", "/c1", "/c2", "/c3", "/c4", "/c5", "/c6", "/c7"];
 
 const NavigationButtons = () => {
   const pathname = usePathname();

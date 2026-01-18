@@ -1,11 +1,6 @@
 "use client";
 import { useRef } from "react";
-import {
-  useScroll,
-  useTransform,
-  motion,
-  useMotionValue,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 
 import { Poppins } from "next/font/google";
@@ -38,7 +33,7 @@ const page = () => {
           />
         </motion.div>
       </div>
-      <div className="fixed bottom-30 left-1/2 -translate-x-1/2 z-50"><HiddenName/></div>
+      <HiddenName />
     </div>
   );
 };
@@ -173,30 +168,15 @@ const SVG = () => {
 };
 
 const HiddenName = () => {
-  const ref = useRef(null);
   const name = "MAYANK MISHRA";
-  const mouseX = useMotionValue(Infinity);
-
-  const distance = useTransform(mouseX, (value) => {
-    let bounds = ref?.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
-    return value - bounds.x - bounds.width / 2;
-  });
-
-//   const opacity = useTransform(distance, [-150, 0, 150], [0, 1, 0]);
-
   return (
-    <div
-      ref={ref}
-      className="flex items-center gap-2 bg-red-500"
-    >
-      {name.split(" ").map((word, index) => (
+    <div className="flex items-center gap-2 fixed bottom-50 left-1/2 -translate-x-1/2 z-50 cursor-default animate-glow">
+      {name.split("").map((letter, index) => (
         <motion.span
-          key={index}
-          style={{ opacity: 1 }}
-          className="text-white text-5xl"
+          key={index + letter}
+          className={`text-neutral-300 text-3xl ${poppins.className}`}
         >
-          {word}
+          {letter}
         </motion.span>
       ))}
     </div>

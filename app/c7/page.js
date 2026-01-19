@@ -4,6 +4,7 @@ import { useScroll, useTransform, motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 
 import { Poppins } from "next/font/google";
+import Button from "../components/Button";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -34,6 +35,9 @@ const page = () => {
         </motion.div>
       </div>
       <HiddenName />
+      <div className="fixed bottom-30 left-1/2 -translate-x-1/2 z-50 cursor-default">
+        <Button />
+      </div>
     </div>
   );
 };

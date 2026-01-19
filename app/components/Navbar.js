@@ -8,7 +8,13 @@ import {
   RotateCcwKey,
   TerminalSquareIcon,
 } from "lucide-react";
-import { useMotionValue, useTransform, motion, useSpring, useMotionTemplate } from "motion/react";
+import {
+  useMotionValue,
+  useTransform,
+  motion,
+  useSpring,
+  useMotionTemplate,
+} from "motion/react";
 import Link from "next/link";
 import React, { useRef } from "react";
 
@@ -57,7 +63,7 @@ const Navbar = () => {
     <div
       onMouseMove={(e) => mouseY.set(e.clientY)}
       onMouseLeave={() => mouseY.set(Infinity)}
-      className="fixed bottom-1/2 translate-y-1/2 left-5 z-50 bg-neutral-200 flex flex-col items-center justify-center gap-3 w-16 py-4 rounded-3xl"
+      className="fixed bottom-1/2 translate-y-1/2 left-5 z-50 bg-neutral-200 flex flex-col items-center justify-center gap-3 w-16 py-4 rounded-full"
     >
       {navLinks.map((elem, _) => (
         <IndividualLink

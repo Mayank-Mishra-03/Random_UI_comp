@@ -55,6 +55,10 @@ const navLinks = [
     title: "P8",
     href: "/c8",
   },
+  {
+    title: "P9",
+    href: "/c9",
+  },
 ];
 
 const Navbar = () => {

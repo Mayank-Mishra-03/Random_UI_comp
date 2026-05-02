@@ -21,6 +21,19 @@ import {
 const page = () => {
   return (
     <div className="flex items-center justify-center h-screen">
+      <div className="h-auto max-w-3xl bg-neutral-300 p-10 rounded-2xl flex gap-10 overflow-auto scrollbar-hide">
+        {/* Note: If the parent container has flex property, then its children might shrink even if width is applied to them. Flex overrides the width property. So to avoid this use shrink-0 */}
+        {/* Note: To hide the scrollbar use scrollbar-hide. Scrollbar hide is defined in the globals.css file */}
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+        <div className="h-80 w-80 shrink-0 bg-neutral-200 border border-neutral-500 rounded-3xl"></div>
+      </div>
       <FloatingDocComponent />
     </div>
   );
